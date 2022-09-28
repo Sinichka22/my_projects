@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <meta name="theme-color" content="#998E78">
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Shop</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navigation" id="navbar">
+          <div class="logo">
+            <a href="index.html" class="logo__link">              
+              <svg
+                class="logo__img"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"               
+              >
+                <g clip-path="url(#a)">
+                  <path
+                    d="m21.517 22.65-.358-1.672a28.298 28.298 0 0 0-4.02-9.625V8.64a3.659 3.659 0 0 0 1.465-2.928V4.248a.732.732 0 0 0-.733-.732h-.732V.732a.733.733 0 0 0-1.465 0v2.791A4.15 4.15 0 0 0 12.5 5.315a4.15 4.15 0 0 0-3.174-1.792V.733a.732.732 0 0 0-1.465 0v2.783H7.13a.732.732 0 0 0-.733.732v1.465c0 1.195.576 2.259 1.465 2.928v2.712a28.3 28.3 0 0 0-4.02 9.625l-.358 1.671a.732.732 0 0 0 .466.842A24.91 24.91 0 0 0 12.5 25a24.91 24.91 0 0 0 8.552-1.51.732.732 0 0 0 .465-.84ZM15.918 4.98h1.22v.733a2.2 2.2 0 0 1-2.197 2.197h-1.709v-.244a2.689 2.689 0 0 1 2.686-2.686Zm-8.057 0h1.221a2.689 2.689 0 0 1 2.686 2.686v.244h-1.71a2.2 2.2 0 0 1-2.197-2.197V4.98Zm2.198 4.395h4.882c.251 0 .496-.025.733-.074v1.539H9.326V9.3c.237.049.482.074.733.074Zm2.441 14.16c-2.542 0-5.044-.407-7.45-1.21l.224-1.04a26.84 26.84 0 0 1 3.715-8.98h7.022a26.84 26.84 0 0 1 3.715 8.98l.223 1.04a23.444 23.444 0 0 1-7.449 1.21Z"
+                    fill="#000"
+                  />
+                  
+                </g>
+                
+                <defs>
+
+                  <clipPath id="a">
+                    <path fill="#fff" d="M0 0h25v25H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
+              Womazing
+            </a>
+          </div>                   
+          <!-- Mobile Menu -->
+          <div class="mobile-roll__wrapper">
+            <button class="hamburger">
+            </button>
+            <nav class="mobile-roll">              
+              <ul class="navigation__menu" id="navigation">
+                <li class="navigation__item">
+                  <a href="index.html" class="navigation__link</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="shop.html" class="navigation__link"> Магазин </a>
+                </li>
+                <li class="navigation__item">
+                  <a href="about-brand.html" class="navigation__link"> О бренде </a>
+                </li>
+                <li class="navigation__item">
+                  <a href="contacts.html" class="navigation__link active">  Контакты </a>
+                </li>
+              </ul>
+              <button type="button" class="menu-close" id="closeMenu">
+                x
+              </button>
+            </nav>
+          </div>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="index.html" class="navigation__link"> Главная </a>
+            </li>
+            <li class="navigation__item">
+              <a href="shop.html" class="navigation__link"> Магазин </a>
+            </li>
+            <li class="navigation__item">
+              <a href="about-brand.html" class="navigation__link"> О бренде </a>
+            </li>
+            <li class="navigation__item">
+              <a href="contacts.html" class="navigation__link active"> Контакты </a>
+            </li>
+          </ul>
+          <div class="tel">
+            <button class="tel__btn open__btn" id="open__btn">              
+            </button>
+            <div class="modal-window_wrapper" id="modal">
+              <div class="overlay" id="overlay">
+                <div class="container"></div>
+              </div>
+              <div class="modal-window_one" id="modal-window_one">
+                <div class="modal-window__content">
+                  <div>
+                    <button class="close__btn" id="close__btn"></button>
+                  </div>
+                  <h2 class="modal-window__titel">Заказать обратный звонок</h2>
+                  <form action="mail.php" class="form-call form-val" id="form-call">
+                    <input
+                      type="text"
+                      class="form-call__input valid"
+                      placeholder="Имя"
+                      name="firstName"
+                      required
+                    />
+                    <input
+                      type="text"
+                      class="form-call__input valid"
+                      placeholder="E-mail"
+                      name="email"
+                      required
+                    />
+                    <input
+                      type="text"
+                      class="form-call__input valid"
+                      placeholder="Телефон"
+                      name="phoneNumber"
+                      required
+                    />
+                    <button class="button form-btn form-btn_one" id="open-two__btn">Заказать звонок</button>
+                  </form>                  
+                </div>                
+              </div>            
+            </div>
+            <div class="modal-window_wrapper-two " id="modal-two">
+              <div class="overlay" id="overlay"></div>
+              <div class="modal-window_two" id="modal-window_two">
+                <div class="modal-window__content">
+                  <h2 class="modal-window__titel modal-two__title">
+                    Отлично! Мы скоро вам перезвоним.
+                  </h2>
+                  <button class="button-tr form-btn_two">Заказать</button>
+                </div>
+              </div>      
+            </div>
+            <a href="tel:+74958235412" class="tel__link">
+              +7 (495) 823-54-12
+            </a>
+            <div class="cart">
+              <a href="cart.html" class="cart__link">
+                <img
+                  src="img/shopping-bags .svg"
+                  alt="корзина товаров"
+                  width="24"
+                  height="24"
+                  class="cart__img"
+                />
+                <button type="button" class="cart__items">3</button>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header> 
+    <section class="inner">
+      <div class="container">
+        <h1 class="inner__title">Магазин</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="index.html"> Главная
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link active"
+              href="shop.html">
+              Магазин
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="categories">
+      <div class="container">
+        <div class="categories-wrapper">
+          <div class="categories__btn active" data-btn="1">
+            Все
+          </div>
+          <div class="categories__btn" data-btn="2">
+            Пальто
+          </div>
+          <div class="categories__btn" data-btn="3">
+            Свитшоты
+          </div>
+          <div class="categories__btn" data-btn="4">
+            Кардиганы
+          </div>
+          <div class="categories__btn" data-btn="5">
+            Толстовки
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="catalog">
+      <div class="container">
+        <span class="catalog-showing">
+          Показано: 9 из 12 товаров
+        </span>
+        <div class="new-collection__list">
+           <div class="new-collection__item">
+            <div class="new-collection__img">
+              <img
+                src="img/card-1.png"
+                alt="фото модели"
+              />
+              <a href="one-item.html" class="new-collection__link"></a>              
+            </div>
+            <h4 class="new-collection__name">Футболка USA</h4>
+            <div class="new-collection__prices">
+              <span class="new-collection__prices_old"> $229 </span>
+              <span class="new-collection__prices_new"> $129 </span>
+            </div>
+          </div>
+          <div class="new-collection__item">
+            <div class="new-collection__img">
+              <img
+                src="img/card-2.png"
+                alt="фото модели"
+                width="350"
+                height="478"
+              />
+              <a href="one-item.html" class="new-collection__link"></a>
+            </div>
+            <h4 class="new-collection__name">Купальник Glow</h4>
+            <div class="new-collection__prices">
+              <span class="new-collection__prices_new"> $129 </span>
+            </div>
+          </div>
+          <div class="new-collection__item">            
+              <div class="new-collection__img">
+                <img
+                  class="new-collection__img_card-3"
+                  src="img/card-3.png"
+                  alt="фото модели"
+                  width="350"
+                  height="478"
+                />
+                <a href="one-item.html" class="new-collection__link"></a>
+            </div>
+            <h4 class="new-collection__name">Свитшот Sweet Shot</h4>
+            <div class="new-collection__prices">
+              <span class="new-collection__prices_new"> $129 </span>
+            </div>
+          </div>
+          <div class="new-collection__item">
+            <div class="new-collection__img">
+              <img
+                src="img/card-1.png"
+                alt="фото модели"
+              />
+              <a href="one-item.html" class="new-collection__link"></a>              
+            </div>
+            <h4 class="new-collection__name">Футболка USA</h4>
+            <div class="new-collection__prices">
+              <span class="new-collection__prices_old"> $229 </span>
+              <span class="new-collection__prices_new"> $129 </span>
+            </div>
+          </div>
+          <div class="new-collection__item">
+            <div class="new-collection__img">
+              <img
+                src="img/card-2.png"
+                alt="фото модели"
+                width="350"
+                height="478"
+              />
+              <a href="one-item.html" class="new-collection__link"></a>
+            </div>
+            <h4 class="new-collection__name">Купальник Glow</h4>
+            <div class="new-collection__prices">
+              <span class="new-collection__prices_new"> $129 </span>
+            </div>
+          </div>
+          <div class="new-collection__item">
+            
+              <div class="new-collection__img">
+                <img
+                  class="new-collection__img_card-3"
+                  src="img/card-3.png"
+                  alt="фото модели"
+                  width="350"
+                  height="478"
+                />
+                <a href="one-item.html" class="new-collection__link active"></a>
+            </div>
+
+            <h4 class="new-collection__name">Свитшот Sweet Shot</h4>
+            <div class="new-collection__prices">
+              <span class="new-collection__prices_new"> $129 </span>
+            </div>
+          </div>
+          <div class="new-collection__item">
+            <div class="new-collection__img">
+              <img
+                src="img/card-1.png"
+                alt="фото модели"
+              />
+              <a href="one-item.html" class="new-collection__link"></a>              
+            </div>
+            <h4 class="new-collection__name">Футболка USA</h4>
+            <div class="new-collection__prices">
+              <span class="new-collection__prices_old"> $229 </span>
+              <span class="new-collection__prices_new"> $129 </span>
+            </div>
+          </div>
+          <div class="new-collection__item">
+            <div class="new-collection__img">
+              <img
+                src="img/card-2.png"
+                alt="фото модели"
+                width="350"
+                height="478"
+              />
+              <a href="one-item.html" class="new-collection__link"></a>
+            </div>
+            <h4 class="new-collection__name">Купальник Glow</h4>
+            <div class="new-collection__prices">
+              <span class="new-collection__prices_new"> $129 </span>
+            </div>
+          </div>
+          <div class="new-collection__item">            
+              <div class="new-collection__img">
+                <img
+                  class="new-collection__img_card-3"
+                  src="img/card-3.png"
+                  alt="фото модели"
+                  width="350"
+                  height="478"
+                />
+                <a href="one-item.html" class="new-collection__link"></a>
+            </div>
+            <h4 class="new-collection__name">Свитшот Sweet Shot</h4>
+            <div class="new-collection__prices">
+              <span class="new-collection__prices_new"> $129 </span>
+            </div>
+          </div> 
+        </div> 
+        <span class="catalog-showing">
+          Показано: 9 из 12 товаров
+        </span>
+        <div class="pagination-container">
+          <ul class="pagination__list">
+            <li class="pagination__item pagination__item_current">
+              <button class="pagination__btn pagination__btn_current">1</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__btn">2</button>
+            </li>
+            <li class="pagination__item pagination__item_right">
+               <button class="pagination__btn_next">
+                </button>
+            </li>        
+          </ul>
+        </div>                
+      </div>
+    </section>                        
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-info">
+            <div class="logo">
+              <a href="" class="logo__link">
+                <svg
+                  class="logo__img"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#a)">
+                    <path
+                      d="m21.517 22.65-.358-1.672a28.298 28.298 0 0 0-4.02-9.625V8.64a3.659 3.659 0 0 0 1.465-2.928V4.248a.732.732 0 0 0-.733-.732h-.732V.732a.733.733 0 0 0-1.465 0v2.791A4.15 4.15 0 0 0 12.5 5.315a4.15 4.15 0 0 0-3.174-1.792V.733a.732.732 0 0 0-1.465 0v2.783H7.13a.732.732 0 0 0-.733.732v1.465c0 1.195.576 2.259 1.465 2.928v2.712a28.3 28.3 0 0 0-4.02 9.625l-.358 1.671a.732.732 0 0 0 .466.842A24.91 24.91 0 0 0 12.5 25a24.91 24.91 0 0 0 8.552-1.51.732.732 0 0 0 .465-.84ZM15.918 4.98h1.22v.733a2.2 2.2 0 0 1-2.197 2.197h-1.709v-.244a2.689 2.689 0 0 1 2.686-2.686Zm-8.057 0h1.221a2.689 2.689 0 0 1 2.686 2.686v.244h-1.71a2.2 2.2 0 0 1-2.197-2.197V4.98Zm2.198 4.395h4.882c.251 0 .496-.025.733-.074v1.539H9.326V9.3c.237.049.482.074.733.074Zm2.441 14.16c-2.542 0-5.044-.407-7.45-1.21l.224-1.04a26.84 26.84 0 0 1 3.715-8.98h7.022a26.84 26.84 0 0 1 3.715 8.98l.223 1.04a23.444 23.444 0 0 1-7.449 1.21Z"
+                      fill="#000"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="a">
+                      <path fill="#fff" d="M0 0h25v25H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                Womazing
+              </a>
+            </div>
+            <p class="footer-info__text footer-info_rights">
+              © Все права защищены
+            </p>
+            <p class="footer-info__text footer-info_privacy">
+              Политика конфиденциальности
+            </p>
+            <p class="footer-info__text footer-info_offer">Публичная оферта</p>
+          </div>
+          <ul class="footer-list">
+            <li class="navigation__item">
+              <a href="index.html" class="navigation__link"> Главная </a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="shop.html"
+                class="navigation__link  active navigation__link_shop"
+              >
+                Магазин
+              </a>
+              <ul class="shop__list">
+                <li class="shop__item">
+                  <a href="#" class="shop__link"> Пальто </a>
+                </li>
+                <li class="shop__item">
+                  <a href="one-item.html" class="shop__link"> Свитшоты </a>
+                </li>
+                <li class="shop__item">
+                  <a href="#" class="shop__link"> Кардиганы </a>
+                </li>
+                <li class="shop__item">
+                  <a href="#" class="shop__link"> Толстовки </a>
+                </li>
+              </ul>
+            </li>
+            <li class="navigation__item">
+              <a href="about-brand.html" class="navigation__link"> О бренде </a>
+            </li>
+            <li class="navigation__item">
+              <a href="contacts.html" class="navigation__link"> Контакты </a>
+            </li>
+          </ul>
+          <div class="footer-connection">
+            <a href="tel:+380448235412" class="tel__link footer-tel">
+                +38 (044) 823-54-12
+            </a>
+            <a href="#" class="post__link"> hello@womazing.com </a>            
+            <ul class="social-networks">
+              <li class="social-networks__item">
+                <!--noindex-->
+                <a
+                  href="#"
+                  class="social-networks__link"
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    class="social-networks_instagram"
+                    width="22"
+                    height="23"
+                    viewBox="0 0 22 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#a)" fill="#000">
+                      <path
+                        d="M15.61.5H6.39A6.398 6.398 0 0 0 0 6.89v9.22a6.398 6.398 0 0 0 6.39 6.39h9.22A6.398 6.398 0 0 0 22 16.11V6.89A6.398 6.398 0 0 0 15.61.5Zm4.671 15.61a4.677 4.677 0 0 1-4.672 4.671H6.391a4.677 4.677 0 0 1-4.672-4.672V6.891A4.677 4.677 0 0 1 6.39 2.219h9.218a4.677 4.677 0 0 1 4.672 4.672v9.218Z"
+                      />
+                      <path
+                        d="M11 5.57c-3.27 0-5.93 2.66-5.93 5.93 0 3.27 2.66 5.93 5.93 5.93 3.27 0 5.93-2.66 5.93-5.93 0-3.27-2.66-5.93-5.93-5.93Zm0 10.14a4.216 4.216 0 0 1-4.21-4.21A4.216 4.216 0 0 1 11 7.29a4.216 4.216 0 0 1 4.21 4.21A4.216 4.216 0 0 1 11 15.71ZM17.016 6.344a.86.86 0 1 0 0-1.72.86.86 0 0 0 0 1.72Z"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path
+                          fill="#fff"
+                          transform="translate(0 .5)"
+                          d="M0 0h22v22H0z"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+                <!--noindex-->
+              </li>
+              <li class="social-networks__item">
+                <!--noindex-->
+                <a
+                  href="#"
+                  class="social-networks__link"
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    class="social-networks_facebook"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.54 0H2.46A2.464 2.464 0 0 0 0 2.46v16.08A2.464 2.464 0 0 0 2.46 21h16.08A2.464 2.464 0 0 0 21 18.54V2.46A2.464 2.464 0 0 0 18.54 0Zm.82 18.54c0 .451-.369.82-.82.82H13.7V13.37h2.625l.306-2.543H13.7V8.08c0-.701.53-1.23 1.23-1.23h1.846V4.47c-.485-.068-1.422-.163-1.845-.163-.957 0-1.916.403-2.631 1.107-.737.725-1.143 1.674-1.143 2.673v2.741H8.49v2.543h2.666v5.988H2.461a.821.821 0 0 1-.82-.82V2.461c0-.452.368-.82.82-.82h16.078c.452 0 .82.368.82.82v16.078Z"
+                      fill="#000"
+                    />
+                  </svg>
+                </a>
+                <!--noindex-->
+              </li>
+              <li class="social-networks__item">
+                <!--noindex-->
+                <a
+                  href="#"
+                  class="social-networks__link"
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    class="social-networks_twitter"
+                    width="23"
+                    height="19"
+                    viewBox="0 0 23 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m20.271 3.165-.011-.044A4.867 4.867 0 0 0 22.37.471a9.815 9.815 0 0 1-3.055 1.168C18.456.72 17.306.156 15.947.156c-2.604 0-4.761 2.109-4.761 4.717 0 .371.052.735.134 1.078v.045C7.44 5.774 3.924 3.8 1.617.965c-.405.697-.629 1.694-.629 2.56 0 1.348.8 3.153 2.067 3.998v.09c-.756-.03-1.53-.551-2.157-.898 0 .02.028.045.028.066 0 2.289 1.677 4.263 3.836 4.696-.376.1-.906.18-1.303.18-.305 0-.61-.08-.898-.136.6 1.877 2.335 3.1 4.402 3.1v.045c-1.609 1.247-3.647 2.111-5.84 2.111-.38 0-.853-.045-1.123-.09 2.086 1.34 4.566 2.157 7.232 2.157 8.678 0 13.432-7.143 13.432-13.387v-.629c.923-.667 1.705-1.567 2.336-2.516 0 0-1.656.785-2.729.853Zm-1.404 2.292c0 1.348-.264 2.764-.764 4.094a11.977 11.977 0 0 1-2.246 3.75c-1.514 1.709-4.239 3.746-8.625 3.746-.128 0-.257-.002-.386-.007.424-.245.83-.519 1.218-.82l.696-.539v-2.857l-.74-.008a1.477 1.477 0 0 1-1.461-1.477v-1.47l-.972-.219a.943.943 0 0 1-.735-.92V7.48l-.023-.916-.799-.534a3.666 3.666 0 0 1-.88-1.154c2.357 1.72 5.158 2.749 8.068 2.915l1.9.109v-2.16l-.05-.207a2.857 2.857 0 0 1-.086-.659c0-.774.31-1.504.87-2.057a2.968 2.968 0 0 1 2.095-.863c.796 0 1.49.308 2.06.915l.458.489.055.214.012.044.335 1.298v.544Z"
+                      fill="#000"
+                    />
+                  </svg>
+                </a>
+                <!--noindex-->
+              </li>
+            </ul>
+            <div class="card-payment">
+              <a href="#" class="card-payment__link">
+                <img
+                  src="img/visa-mastercard.svg"
+                  alt="платежные карты"
+                  width="68"
+                  height="22"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/general.js"></script> 
+  </body>
+</html>
