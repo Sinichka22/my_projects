@@ -19,7 +19,7 @@ demo link: https://sinichka22.github.io/my_projects/ONFIRECode/
 
 Restaurant
 
-code link: https://github.com/Sinichka22/my_projects/tree/Restaurant/
+code link: https://github.com/Sinichka22/my_projects/tree/Restaurant
 
 demo link: https://sinichka22.github.io/my_projects/Restaurant/
 
