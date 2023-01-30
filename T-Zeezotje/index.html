@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>'T Zeezotje</title>
+    <meta
+      name="description"
+      content="The best restaurant with delicious lunches"
+    />
+    <meta name="keywords" content="restaurant, menu, wine list, lunch menu" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta property="og:title" content="'T Zeezotje" />
+    <meta
+      property="og:description"
+      content="A bad day with lunch is better than a good day without it."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="#" />
+    <meta property="og:site_name" content="'T Zeezotje" />
+    <meta name="theme-color" content="#3A4574" />
+    <link rel="apple-touch-icon" href="images/1.ico" />
+    <link rel="icon" type="imag/png" href="images/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=1d5f0520-23cc-436b-8b87-3e1c57bab8fb&lang=en_US"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__container">
+            <a href="#" class="logo">
+              <picture class="card-img">
+                <source
+                  media="(min-width: 300px) and (max-width: 1199px)"
+                  srcset="images/logo-color.png"
+                />
+                <img src="images/logo-white.png" class="ligo__img" alt="Logo" />
+              </picture>
+            </a>
+            <nav class="menu">
+              <ul class="menu__list" id="nav">
+                <li class="menu__item menu__item_active">
+                  <a href="#carte" class="menu__link">À la carte</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Wijnkaart</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#carte" class="menu__link">Lunchmenu</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#contact" class="menu__link">Contact</a>
+                </li>
+              </ul>
+              <div class="burger">
+                <div class="burger-btn" id="burger-btn">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+                <div class="burger-overlay" id="overlay"></div>
+                <div class="popup" id="popup"></div>
+              </div>
+            </nav>
+            <div class="tel__wrapper">
+              <button class="tel__btn"></button>
+              <a class="tel" href="tel:+3292825725" id="tel">
+                +32 9 282 57 25
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="offer">
+          <p class="offer__time-open">Open everyday 6am - 9pm</p>
+
+          <h1 class="offer__title">
+            A bad day with lunch is better than a good day without it.
+          </h1>
+          <div class="offer__reserve">
+            <a href="#" class="offer__btn btn" id="open__btn">
+              Reserve a table
+            </a>
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  class="social__link"
+                  href="#"
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    class="social__img"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="24" cy="24" r="23.5" stroke="white" />
+                    <path
+                      d="M21.3359 18.832V20.64H16.6799V23.504H20.2479V25.28H16.6799V30H14.4399V18.832H21.3359ZM25.1643 22.432C25.4523 22.0053 25.847 21.6587 26.3483 21.392C26.8603 21.1253 27.4416 20.992 28.0923 20.992C28.8496 20.992 29.5323 21.1787 30.1403 21.552C30.759 21.9253 31.2443 22.4587 31.5963 23.152C31.959 23.8347 32.1403 24.6293 32.1403 25.536C32.1403 26.4427 31.959 27.248 31.5963 27.952C31.2443 28.6453 30.759 29.184 30.1403 29.568C29.5323 29.952 28.8496 30.144 28.0923 30.144C27.431 30.144 26.8496 30.016 26.3483 29.76C25.8576 29.4933 25.463 29.152 25.1643 28.736V30H22.9243V18.16H25.1643V22.432ZM29.8523 25.536C29.8523 25.0027 29.7403 24.544 29.5163 24.16C29.303 23.7653 29.015 23.4667 28.6523 23.264C28.3003 23.0613 27.9163 22.96 27.5003 22.96C27.095 22.96 26.711 23.0667 26.3483 23.28C25.9963 23.4827 25.7083 23.7813 25.4843 24.176C25.271 24.5707 25.1643 25.0347 25.1643 25.568C25.1643 26.1013 25.271 26.5653 25.4843 26.96C25.7083 27.3547 25.9963 27.6587 26.3483 27.872C26.711 28.0747 27.095 28.176 27.5003 28.176C27.9163 28.176 28.3003 28.0693 28.6523 27.856C29.015 27.6427 29.303 27.3387 29.5163 26.944C29.7403 26.5493 29.8523 26.08 29.8523 25.536Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link"
+                  href="#"
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    class="social__img"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="24" cy="24" r="23.5" stroke="white" />
+                    <path
+                      d="M18.6956 18.832V30H16.4556V18.832H18.6956ZM24.3807 20.992C25.042 20.992 25.6234 21.1253 26.1247 21.392C26.626 21.648 27.0207 21.984 27.3087 22.4V21.136H29.5647V30.064C29.5647 30.8853 29.3994 31.616 29.0687 32.256C28.738 32.9067 28.242 33.4187 27.5807 33.792C26.9194 34.176 26.1194 34.368 25.1807 34.368C23.922 34.368 22.8874 34.0747 22.0767 33.488C21.2767 32.9013 20.8234 32.1013 20.7167 31.088H22.9407C23.058 31.4933 23.3087 31.8133 23.6927 32.048C24.0874 32.2933 24.562 32.416 25.1167 32.416C25.7674 32.416 26.2954 32.2187 26.7007 31.824C27.106 31.44 27.3087 30.8533 27.3087 30.064V28.688C27.0207 29.104 26.6207 29.4507 26.1087 29.728C25.6074 30.0053 25.0314 30.144 24.3807 30.144C23.634 30.144 22.9514 29.952 22.3327 29.568C21.714 29.184 21.2234 28.6453 20.8607 27.952C20.5087 27.248 20.3327 26.4427 20.3327 25.536C20.3327 24.64 20.5087 23.8453 20.8607 23.152C21.2234 22.4587 21.7087 21.9253 22.3167 21.552C22.9354 21.1787 23.6234 20.992 24.3807 20.992ZM27.3087 25.568C27.3087 25.024 27.202 24.56 26.9887 24.176C26.7754 23.7813 26.4874 23.4827 26.1247 23.28C25.762 23.0667 25.3727 22.96 24.9567 22.96C24.5407 22.96 24.1567 23.0613 23.8047 23.264C23.4527 23.4667 23.1647 23.7653 22.9407 24.16C22.7274 24.544 22.6207 25.0027 22.6207 25.536C22.6207 26.0693 22.7274 26.5387 22.9407 26.944C23.1647 27.3387 23.4527 27.6427 23.8047 27.856C24.1674 28.0693 24.5514 28.176 24.9567 28.176C25.3727 28.176 25.762 28.0747 26.1247 27.872C26.4874 27.6587 26.7754 27.36 26.9887 26.976C27.202 26.5813 27.3087 26.112 27.3087 25.568Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link"
+                  href="#"
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    class="social__img"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="24" cy="24" r="23.5" stroke="white" />
+                    <path
+                      d="M12.6448 20.64H15.6208V30H17.8608V20.64H20.8368V18.832H12.6448V20.64ZM24.0872 30H26.5192L28.1352 23.808L29.7512 30H32.1672L34.7592 21.136H32.6152L31.0472 27.872L29.3832 21.136H27.0152L25.3192 27.888L23.7512 21.136H21.4792L24.0872 30Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link"
+                  href="#"
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    class="social__img"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="24" cy="24" r="23.5" stroke="white" />
+                    <path
+                      d="M19.2805 26.112V30H21.5205V26.112L25.2965 18.832H22.8005L20.4165 23.936L18.0165 18.832H15.4885L19.2805 26.112ZM26.9404 27.248C26.9404 29.28 28.0764 30 29.7724 30H31.1804V28.112H30.1404C29.4364 28.112 29.1964 27.856 29.1964 27.264V22.976H31.1804V21.136H29.1964V18.944H26.9404V21.136H25.8844V22.976H26.9404V27.248Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img
+          class="offer__img"
+          src="images/offer-light.jpg"
+          alt="restaurant photo"
+        />
+      </div>
+    </header>
+    <main class="main">
+      <section class="carte" id="carte">
+        <div class="container">
+          <h2 class="section-title visually-hidden">Menu for the week</h2>
+          <div class="carte__wrapper">
+            <div class="carte__menu">
+              <div class="day__item">
+                <p class="day__data">Woensdag 12/01</p>
+                <div class="day__dishes">
+                  <p class="day__dish day__dish-one">Salade met Serrano</p>
+                  <div class="dots__dish">
+                    <span class="dot__dish"></span>
+                    <span class="dot__dish"></span>
+                    <span class="dot__dish"></span>
+                  </div>
+                  <p class="day__dish day__dish-two">Steak Tartaar</p>
+                </div>
+              </div>
+              <div class="day__item">
+                <p class="day__data">Donderdag 13/01</p>
+                <div class="day__dishes">
+                  <p class="day__dish-one">Toast Roquefort</p>
+                  <div class="dots__dish">
+                    <span class="dot__dish"></span>
+                    <span class="dot__dish"></span>
+                    <span class="dot__dish"></span>
+                  </div>
+                  <p class="day__dish-two">Penne met Kip en Prei</p>
+                </div>
+              </div>
+              <div class="day__item">
+                <p class="day__data">Vrijdag 14/01</p>
+                <div class="day__dishes">
+                  <p class="day__dish-one">Verrassing van de Chef</p>
+                  <div class="dots__dish">
+                    <span class="dot__dish"></span>
+                    <span class="dot__dish"></span>
+                    <span class="dot__dish"></span>
+                  </div>
+                  <p class="day__dish-two">Penne met Kip en Prei</p>
+                </div>
+              </div>
+              <div class="day__item">
+                <p class="day__data">Vrijdag 15/01</p>
+                <div class="day__dishes">
+                  <p class="day__dish-one">Verrassing van de Chef</p>
+                  <div class="dots__dish">
+                    <span class="dot__dish"></span>
+                    <span class="dot__dish"></span>
+                    <span class="dot__dish"></span>
+                  </div>
+                  <p class="day__dish-two">Penne met Kip en Prei</p>
+                </div>
+              </div>
+              <div class="day__item">
+                <p class="day__data">Vrijdag 16/01</p>
+                <div class="day__dishes">
+                  <p class="day__dish-one">Verrassing van de Chef</p>
+                  <div class="dots__dish">
+                    <span class="dot__dish"></span>
+                    <span class="dot__dish"></span>
+                    <span class="dot__dish"></span>
+                  </div>
+                  <p class="day__dish-two">Penne met Kip en Prei</p>
+                </div>
+              </div>
+            </div>
+            <div class="carte__img">
+              <img
+                src="images/carte-img-botton.png"
+                alt="restaurant photo"
+                class="img-first"
+              />
+              <img
+                src="images/carte-img-top.png"
+                alt="restaurant photo"
+                class="img-second"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="container reviews__wrapper">
+          <h2 class="visually-hidden">reviews</h2>
+          <div class="slider__reviews">
+            <div class="reviews__list reviews-slider__wrapper">
+              <blockquote class="reviews__item reviews-slide active">
+                <svg
+                  class="reviews__img"
+                  width="83"
+                  height="58"
+                  viewBox="0 0 83 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.1336 58C16.7095 58 13.6279 57.3937 10.8886 56.1812C8.28626 54.8339 6.2317 53.0151 4.7251 50.7247C3.35546 48.7038 2.19127 46.144 1.23252 43.0453C0.410737 39.8119 0 36.3763 0 32.7387C0 26.0023 1.71201 19.7375 5.13611 13.9443C8.69718 8.01627 14.1758 3.36818 21.5718 0L23.4207 3.63763C19.7227 5.25436 16.4355 7.67945 13.5593 10.9129C10.6831 14.0116 8.83413 17.3124 8.01234 20.8153C7.05359 24.1835 6.91668 27.417 7.6015 30.5157C10.8886 26.878 15.4083 25.0592 21.1608 25.0592C26.2285 25.0592 30.3374 26.4739 33.4876 29.3031C36.6377 32.1324 38.2128 36.1742 38.2128 41.4286C38.2128 46.4135 36.5008 50.4553 33.0767 53.554C29.7896 56.518 25.4752 58 20.1336 58ZM64.9208 58C61.4967 58 58.415 57.3937 55.6757 56.1812C53.0734 54.8339 51.019 53.0151 49.5124 50.7247C48.1428 48.7038 46.9786 46.144 46.0199 43.0453C45.1981 39.8119 44.7872 36.3763 44.7872 32.7387C44.7872 26.0023 46.4992 19.7375 49.9233 13.9443C53.4843 8.01627 58.9629 3.36818 66.359 0L68.208 3.63763C64.51 5.25436 61.2229 7.67945 58.3466 10.9129C55.4704 14.0116 53.6213 17.3124 52.7995 20.8153C51.8408 24.1835 51.7038 27.417 52.3887 30.5157C55.6758 26.878 60.1956 25.0592 65.9481 25.0592C71.0158 25.0592 75.1246 26.4739 78.2747 29.3031C81.4249 32.1324 83 36.1742 83 41.4286C83 46.4135 81.288 50.4553 77.8639 53.554C74.5768 56.518 70.2624 58 64.9208 58Z"
+                    fill="#D3B47F"
+                  />
+                </svg>
+                <h3 class="reviews__title">
+                  Goede service, lekker eten, toffe ambiance
+                </h3>
+                <p class="reviews__text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren.
+                </p>
+                <cite class="reviews__author-name">Alian Heyndrickx</cite>
+              </blockquote>
+              <blockquote class="reviews__item reviews-slide">
+                <svg
+                  class="reviews__img"
+                  width="83"
+                  height="58"
+                  viewBox="0 0 83 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.1336 58C16.7095 58 13.6279 57.3937 10.8886 56.1812C8.28626 54.8339 6.2317 53.0151 4.7251 50.7247C3.35546 48.7038 2.19127 46.144 1.23252 43.0453C0.410737 39.8119 0 36.3763 0 32.7387C0 26.0023 1.71201 19.7375 5.13611 13.9443C8.69718 8.01627 14.1758 3.36818 21.5718 0L23.4207 3.63763C19.7227 5.25436 16.4355 7.67945 13.5593 10.9129C10.6831 14.0116 8.83413 17.3124 8.01234 20.8153C7.05359 24.1835 6.91668 27.417 7.6015 30.5157C10.8886 26.878 15.4083 25.0592 21.1608 25.0592C26.2285 25.0592 30.3374 26.4739 33.4876 29.3031C36.6377 32.1324 38.2128 36.1742 38.2128 41.4286C38.2128 46.4135 36.5008 50.4553 33.0767 53.554C29.7896 56.518 25.4752 58 20.1336 58ZM64.9208 58C61.4967 58 58.415 57.3937 55.6757 56.1812C53.0734 54.8339 51.019 53.0151 49.5124 50.7247C48.1428 48.7038 46.9786 46.144 46.0199 43.0453C45.1981 39.8119 44.7872 36.3763 44.7872 32.7387C44.7872 26.0023 46.4992 19.7375 49.9233 13.9443C53.4843 8.01627 58.9629 3.36818 66.359 0L68.208 3.63763C64.51 5.25436 61.2229 7.67945 58.3466 10.9129C55.4704 14.0116 53.6213 17.3124 52.7995 20.8153C51.8408 24.1835 51.7038 27.417 52.3887 30.5157C55.6758 26.878 60.1956 25.0592 65.9481 25.0592C71.0158 25.0592 75.1246 26.4739 78.2747 29.3031C81.4249 32.1324 83 36.1742 83 41.4286C83 46.4135 81.288 50.4553 77.8639 53.554C74.5768 56.518 70.2624 58 64.9208 58Z"
+                    fill="#D3B47F"
+                  />
+                </svg>
+                <h3 class="reviews__title">Goede service</h3>
+                <p class="reviews__text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren.
+                </p>
+                <cite class="reviews__author-name">Alian Heyndrickx</cite>
+              </blockquote>
+              <blockquote class="reviews__item reviews-slide">
+                <svg
+                  class="reviews__img"
+                  width="83"
+                  height="58"
+                  viewBox="0 0 83 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.1336 58C16.7095 58 13.6279 57.3937 10.8886 56.1812C8.28626 54.8339 6.2317 53.0151 4.7251 50.7247C3.35546 48.7038 2.19127 46.144 1.23252 43.0453C0.410737 39.8119 0 36.3763 0 32.7387C0 26.0023 1.71201 19.7375 5.13611 13.9443C8.69718 8.01627 14.1758 3.36818 21.5718 0L23.4207 3.63763C19.7227 5.25436 16.4355 7.67945 13.5593 10.9129C10.6831 14.0116 8.83413 17.3124 8.01234 20.8153C7.05359 24.1835 6.91668 27.417 7.6015 30.5157C10.8886 26.878 15.4083 25.0592 21.1608 25.0592C26.2285 25.0592 30.3374 26.4739 33.4876 29.3031C36.6377 32.1324 38.2128 36.1742 38.2128 41.4286C38.2128 46.4135 36.5008 50.4553 33.0767 53.554C29.7896 56.518 25.4752 58 20.1336 58ZM64.9208 58C61.4967 58 58.415 57.3937 55.6757 56.1812C53.0734 54.8339 51.019 53.0151 49.5124 50.7247C48.1428 48.7038 46.9786 46.144 46.0199 43.0453C45.1981 39.8119 44.7872 36.3763 44.7872 32.7387C44.7872 26.0023 46.4992 19.7375 49.9233 13.9443C53.4843 8.01627 58.9629 3.36818 66.359 0L68.208 3.63763C64.51 5.25436 61.2229 7.67945 58.3466 10.9129C55.4704 14.0116 53.6213 17.3124 52.7995 20.8153C51.8408 24.1835 51.7038 27.417 52.3887 30.5157C55.6758 26.878 60.1956 25.0592 65.9481 25.0592C71.0158 25.0592 75.1246 26.4739 78.2747 29.3031C81.4249 32.1324 83 36.1742 83 41.4286C83 46.4135 81.288 50.4553 77.8639 53.554C74.5768 56.518 70.2624 58 64.9208 58Z"
+                    fill="#D3B47F"
+                  />
+                </svg>
+                <h3 class="reviews__title">Lekker eten, toffe ambiance</h3>
+                <p class="reviews__text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren.
+                </p>
+                <cite class="reviews__author-name">Alian Heyndrickx</cite>
+              </blockquote>
+            </div>
+            <div class="reviews-btn_prev" id="reviews-btn-prev">
+              <svg
+                width="70"
+                height="70"
+                viewBox="0 0 70 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.1042 11.9L45.1209 30.9166C47.3667 33.1625 47.3667 36.8375 45.1209 39.0833L26.1042 58.1"
+                  stroke="#D3B47F"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="reviews-btn_next" id="reviews-btn-next">
+              <svg
+                width="70"
+                height="70"
+                viewBox="0 0 70 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.1042 11.9L45.1209 30.9166C47.3667 33.1625 47.3667 36.8375 45.1209 39.0833L26.1042 58.1"
+                  stroke="#D3B47F"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container">
+          <div class="services__list">
+            <div class="services__item">
+              <div class="services__description">
+                <h3 class="services__title">Lekker eten</h3>
+                <p class="services__text">
+                  Eten gaat niet over indruk maken op mensen. Het gaat erom dat
+                  ze zich op hun gemak voelen. Dat is onze filosofie, goed eten
+                  in een goede sfeer.
+                </p>
+              </div>
+              <img
+                class="services__img"
+                src="images/services-img-1.jpg"
+                alt="good food"
+              />
+            </div>
+            <div class="services__item">
+              <img
+                class="services__img"
+                src="images/services-img-2.jpg"
+                alt="Cool atmosphere"
+              />
+              <div class="services__description">
+                <h3 class="services__title">Toffe ambiance</h3>
+                <p class="services__text">
+                  Het creëren van de juiste sfeer is zeer belangrijk voor ons.
+                  We nemen onze tijd om te zorgen dat alle elementen bijdragen
+                  aan de juiste setting.
+                </p>
+              </div>
+            </div>
+            <div class="services__item">
+              <div class="services__description">
+                <h3 class="services__title">Lekkere cocktails</h3>
+                <p class="services__text">
+                  Ons doel is simpel: een gastvrije plek bieden waar u kunt
+                  genieten van een onvergetelijke cocktail, een goed gesprek en
+                  lekker eten.
+                </p>
+              </div>
+              <img
+                class="services__img"
+                src="images/services-img-3.jpg"
+                alt="Tasty cocktails"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="interior" id="interior">
+        <div class="interior__container">
+          <div class="interior__wrapper">
+            <div class="interior__description">
+              <h2 class="section-title_interior section-title">Sfeerfoto's</h2>
+              <p class="interior-text">
+                De beste manier om de sfeer te ervaren is eens langskomen.
+                <br />In tussentijd hebben we hier alvast wat foto’s voor je
+                klaar.
+              </p>
+            </div>
+            <div class="interior-btn_prev" id="interior-btn-prev">
+              <svg
+                width="70"
+                height="70"
+                viewBox="0 0 70 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.1042 11.9L45.1209 30.9166C47.3667 33.1625 47.3667 36.8375 45.1209 39.0833L26.1042 58.1"
+                  stroke="#D3B47F"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="interior-btn_next" id="interior-btn-next">
+              <svg
+                width="70"
+                height="70"
+                viewBox="0 0 70 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.1042 11.9L45.1209 30.9166C47.3667 33.1625 47.3667 36.8375 45.1209 39.0833L26.1042 58.1"
+                  stroke="#D3B47F"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="slider__interior swiper">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="images/interior-01.jpg"
+                      alt="restaurant photo"
+                      class="interior-slide__img"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="images/interior.jpg"
+                      alt="restaurant photo"
+                      class="interior-slide__img"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="images/interior-03.jpg"
+                      alt="restaurant photo"
+                      class="interior-slide__img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts" id="contact">
+        <div class="container">
+          <div class="contacts__description">
+            <div class="contacts__wrapper">
+              <h2 class="contacts-title">Contacts</h2>
+              <ul class="contacts__list">
+                <li class="contact__item contact__item_phone">
+                  <p class="contact__text">Phone Number</p>
+                  <a class="contact__link" href="tel:+3292825725">
+                    +32 9 282 57 25
+                  </a>
+                </li>
+                <li class="contact__item contact__item_email">
+                  <p class="contact__text">Email</p>
+                  <a href="#" class="contact__link">info@email.com</a>
+                </li>
+                <li class="contact__item contact__item_hours">
+                  <p class="contact__text">Opening Hours</p>
+                  <a href="#" class="contact__link"
+                    >Everyday from 6 AM - 9 PM</a
+                  >
+                </li>
+                <li class="contact__item contact__item_map">
+                  <p class="contact__text">Map Street</p>
+                  <a href="#" class="contact__link">Jl. Raya Surabaya 2787</a>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__forma">
+              <h2 class="contacts-title contacts-form__titel">
+                have any questions?
+              </h2>
+              <div class="contacts__forma-wrapper">
+                <form class="form contacts-form__main" id="form-contacts">
+                  <div class="field">
+                    <div class="field__name">
+                      <p class="field__titl">Name</p>
+                      <input
+                        type="text"
+                        class="field__text"
+                        id="name"
+                        name="firstName"
+                        placeholder="Input your name"
+                        required
+                      />
+                    </div>
+                    <div class="field__mail">
+                      <p class="field__titl">Mail</p>
+                      <input
+                        type="text"
+                        class="field__text"
+                        id="e-mail"
+                        name="email"
+                        placeholder="Input your email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="field__request">
+                    <p class="field__titl">Speciale Request</p>
+                    <input
+                      type="text"
+                      class="field__message"
+                      name="message"
+                      id="message"
+                      placeholder="Input your special request"
+                      required
+                    />
+                  </div>
+                  <button
+                    class="btn contacts-form__btn form-btn"
+                    type="submit"
+                    id="contacts-send__btn"
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__map" id="map">
+            <img
+              src="images/map-location.jpg"
+              alt="map"
+              class="contacts__map-img"
+              id="map-img"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="container footer__container">
+        <a href="#" class="footer__logo">
+          <img src="images/logo-color.png" alt="logo" class="logo__img" />
+        </a>
+        <ul class="social__list">
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="#"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="social__img"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="24" cy="24" r="23.5" stroke="black" />
+                <path
+                  d="M21.3359 18.832V20.64H16.6799V23.504H20.2479V25.28H16.6799V30H14.4399V18.832H21.3359ZM25.1643 22.432C25.4523 22.0053 25.847 21.6587 26.3483 21.392C26.8603 21.1253 27.4416 20.992 28.0923 20.992C28.8496 20.992 29.5323 21.1787 30.1403 21.552C30.759 21.9253 31.2443 22.4587 31.5963 23.152C31.959 23.8347 32.1403 24.6293 32.1403 25.536C32.1403 26.4427 31.959 27.248 31.5963 27.952C31.2443 28.6453 30.759 29.184 30.1403 29.568C29.5323 29.952 28.8496 30.144 28.0923 30.144C27.431 30.144 26.8496 30.016 26.3483 29.76C25.8576 29.4933 25.463 29.152 25.1643 28.736V30H22.9243V18.16H25.1643V22.432ZM29.8523 25.536C29.8523 25.0027 29.7403 24.544 29.5163 24.16C29.303 23.7653 29.015 23.4667 28.6523 23.264C28.3003 23.0613 27.9163 22.96 27.5003 22.96C27.095 22.96 26.711 23.0667 26.3483 23.28C25.9963 23.4827 25.7083 23.7813 25.4843 24.176C25.271 24.5707 25.1643 25.0347 25.1643 25.568C25.1643 26.1013 25.271 26.5653 25.4843 26.96C25.7083 27.3547 25.9963 27.6587 26.3483 27.872C26.711 28.0747 27.095 28.176 27.5003 28.176C27.9163 28.176 28.3003 28.0693 28.6523 27.856C29.015 27.6427 29.303 27.3387 29.5163 26.944C29.7403 26.5493 29.8523 26.08 29.8523 25.536Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="#"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="social__img"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="24" cy="24" r="23.5" stroke="black" />
+                <path
+                  d="M18.6956 18.832V30H16.4556V18.832H18.6956ZM24.3807 20.992C25.042 20.992 25.6234 21.1253 26.1247 21.392C26.626 21.648 27.0207 21.984 27.3087 22.4V21.136H29.5647V30.064C29.5647 30.8853 29.3994 31.616 29.0687 32.256C28.738 32.9067 28.242 33.4187 27.5807 33.792C26.9194 34.176 26.1194 34.368 25.1807 34.368C23.922 34.368 22.8874 34.0747 22.0767 33.488C21.2767 32.9013 20.8234 32.1013 20.7167 31.088H22.9407C23.058 31.4933 23.3087 31.8133 23.6927 32.048C24.0874 32.2933 24.562 32.416 25.1167 32.416C25.7674 32.416 26.2954 32.2187 26.7007 31.824C27.106 31.44 27.3087 30.8533 27.3087 30.064V28.688C27.0207 29.104 26.6207 29.4507 26.1087 29.728C25.6074 30.0053 25.0314 30.144 24.3807 30.144C23.634 30.144 22.9514 29.952 22.3327 29.568C21.714 29.184 21.2234 28.6453 20.8607 27.952C20.5087 27.248 20.3327 26.4427 20.3327 25.536C20.3327 24.64 20.5087 23.8453 20.8607 23.152C21.2234 22.4587 21.7087 21.9253 22.3167 21.552C22.9354 21.1787 23.6234 20.992 24.3807 20.992ZM27.3087 25.568C27.3087 25.024 27.202 24.56 26.9887 24.176C26.7754 23.7813 26.4874 23.4827 26.1247 23.28C25.762 23.0667 25.3727 22.96 24.9567 22.96C24.5407 22.96 24.1567 23.0613 23.8047 23.264C23.4527 23.4667 23.1647 23.7653 22.9407 24.16C22.7274 24.544 22.6207 25.0027 22.6207 25.536C22.6207 26.0693 22.7274 26.5387 22.9407 26.944C23.1647 27.3387 23.4527 27.6427 23.8047 27.856C24.1674 28.0693 24.5514 28.176 24.9567 28.176C25.3727 28.176 25.762 28.0747 26.1247 27.872C26.4874 27.6587 26.7754 27.36 26.9887 26.976C27.202 26.5813 27.3087 26.112 27.3087 25.568Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="#"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="social__img"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="24" cy="24" r="23.5" stroke="black" />
+                <path
+                  d="M12.6448 20.64H15.6208V30H17.8608V20.64H20.8368V18.832H12.6448V20.64ZM24.0872 30H26.5192L28.1352 23.808L29.7512 30H32.1672L34.7592 21.136H32.6152L31.0472 27.872L29.3832 21.136H27.0152L25.3192 27.888L23.7512 21.136H21.4792L24.0872 30Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="#"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="social__img"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="24" cy="24" r="23.5" stroke="black" />
+                <path
+                  d="M19.2805 26.112V30H21.5205V26.112L25.2965 18.832H22.8005L20.4165 23.936L18.0165 18.832H15.4885L19.2805 26.112ZM26.9404 27.248C26.9404 29.28 28.0764 30 29.7724 30H31.1804V28.112H30.1404C29.4364 28.112 29.1964 27.856 29.1964 27.264V22.976H31.1804V21.136H29.1964V18.944H26.9404V21.136H25.8844V22.976H26.9404V27.248Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <div class="modal-window_wrapper" id="modal">
+      <div class="modal__overlay" id="modal__overlay">
+        <div class="container"></div>
+      </div>
+      <div class="modal-window" id="modal-window">
+        <div class="modal-window__content">
+          <div>
+            <button class="close__btn" id="close__btn">
+              <span class="visually-hidden">close</span>
+            </button>
+          </div>
+          <h2 class="modal-window__titel">Want to reserve a table?</h2>
+          <form class="form form-call form-val" id="form-call">
+            <input
+              type="text"
+              class="form-call__input valid"
+              placeholder="Name"
+              id="first-name"
+              name="firstName"
+              required
+            />
+            <input
+              type="text"
+              class="form-call__input valid"
+              placeholder="E-mail"
+              id="email"
+              name="email"
+              required
+            />
+            <input
+              type="text"
+              class="form-call__input valid"
+              placeholder="Phone nomber"
+              id="phone"
+              name="phoneNumber"
+              required
+            />
+            <button class="btn form-btn modal-form__btn" id="send__btn">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
